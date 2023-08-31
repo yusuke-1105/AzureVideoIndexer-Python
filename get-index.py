@@ -7,7 +7,7 @@ class AzureInfo:
         with open('azure-info.yaml', 'r') as f:
             data = yaml.safe_load(f)
             self.account_id = data['accountId']
-            self.sbscription_key = data['subscriptionKey']
+            self.subscription_key = data['subscriptionKey']
             self.location = data['location']
             self.video_id = data['videoId']
 
@@ -18,7 +18,7 @@ url = f'https://api.videoindexer.ai/{ai.location}/Accounts/{ai.account_id}/Video
 headers = {
     # Request headers
     'Cache-Control': 'no-cache',
-    'Ocp-Apim-Subscription-Key': ai.sbscription_key,
+    'Ocp-Apim-Subscription-Key': ai.subscription_key,
 }
 
 result = requests.get(url, headers=headers)
