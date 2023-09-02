@@ -1,4 +1,9 @@
 accountId: ""
 subscriptionKey: ""
+accessToken: ""
+
 location: ""
+
+videoUrl: ""
+videoName: ""
 videoId: ""
